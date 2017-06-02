@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang=nl>
-  <head>
-    <meta charset=utf-8>
-    <title>Volledige Naam</title>
+<head>
+	<meta charset=utf-8>
+	<title>Volledige Naam</title>
     <style>
+		
         body { 
             font-family: "Arial"; 
         }
+		
         div { 
             padding: 5px; 
         }
+		
         label {
             display: inline-block;
             width:8em;
         }
-        #result-fullname {
+		
+        #result_full_name {
             font-weight: bold;
         }
+		
     </style>
-  </head>
-  <Body>                         
-      <form>
-            <div>
-                <label for="firstname">Voornaam:</label>
-                <input id="firstname" name="firstname" type=text placeholder="Voer een voornaam in">
-            </div>
-            <div>
-                <label for="lastname">Achternaam:</label>
-                <input id="lastname" name="lastname" type="text" placeholder="Voer een achternaam in">
-            </div>
-            <div>
-                <button type= "button" id="show-fullname">Toon volledige naam</button>
-            </div>
-      </form>
-      <div id="result-fullname"></div>
-      <script>
-          function showFullname() {
-                
-              var firstname = document.getElementById("firstname").value;
-              var lastname = document.getElementById("lastname").value;  
-              var fullname = getFullName(firstname, lastname);
-              document.getElementById("result-fullname").innerHTML = fullname;
-          }
-          function getFullName(firstname,lastname) {
-                var fullname = firstname + " " + lastname;
-                return fullname;
-          }
-        // button event
-        document.getElementById("show-fullname").addEventListener("click", showFullname);
-      </script>  
-    </body>
+</head>
+<Body>                         
+	<form>
+		<div>
+			<label for="first_name">Voornaam:</label>
+			<input id="first_name" name="first_name" type=text placeholder="Voer een voornaam in">
+		</div>
+		<div>
+			<label for="last_name">Achternaam:</label>
+			<input id="last_name" name="last_name" type="text" placeholder="Voer een achternaam in">
+		</div>
+		<div>
+			<button type= "button" id="show_full_name">Toon volledige naam</button>
+		</div>
+	</form>
+	<div id="result_full_name"></div>
+	<script>
+		function showFullname() {
+			var firstname = document.getElementById("first_name").value;
+			var lastname = document.getElementById("last_name").value;  
+			var fullname = getFullName(firstname, lastname);
+			document.getElementById("result_full_name").innerHTML = fullname;
+		}
+		function getFullName(firstname,lastname) {
+			var fullname = firstname + " " + lastname;
+			return fullname;
+		}
+		// button event
+		document.getElementById("show_full_name").addEventListener("click", showFullname);
+	</script>  
+</body>
 </html>
