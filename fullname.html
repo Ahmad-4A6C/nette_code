@@ -41,14 +41,14 @@
 	<div id="result_full_name"></div>
 	<script>
 		function showFullname() {
-			var firstname = document.getElementById("first_name").value;
-			var lastname = document.getElementById("last_name").value;  
-			var fullname = getFullName(firstname, lastname);
-			document.getElementById("result_full_name").innerHTML = fullname;
+			var firstName = document.getElementById("first_name").value;
+			var lastName = document.getElementById("last_name").value;  
+			var fullName = getFullName(firstName, lastName);
+			document.getElementById("result_full_name").innerHTML = fullName;
 		}
-		function getFullName(firstname,lastname) {
-			var fullname = firstname + " " + lastname;
-			return fullname;
+		function getFullName(firstName,lastName) {
+			var fullName = firstName + " " + lastName;
+			return fullName;
 		}
 		// button event
 		document.getElementById("show_full_name").addEventListener("click", showFullname);
